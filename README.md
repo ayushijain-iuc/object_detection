@@ -16,8 +16,7 @@
 <p>Once you have installed these modules, you can clone the repository and run the main.py file to start the assistant.</p>
 
 <h3 align="center">Usage 🧗‍♂️</h3>
-<p>To use the object detection and counting tool, simply run the object_detection.py file. The tool will ask you to specify the path to the image or video file you want to analyze. The tool will then detect objects in the image or video and provide the total count of objects detected.</p>
+<p>To use the object detection and counting tool, simply run the app.py file. The tool will ask you to specify the path to the image or video file you want to analyze. The tool will then detect objects in the image or video and provide the total count of objects detected.</p>
 
-<h3 align="center"> Contributing😊 </h3>
-<p>If you would like to contribute to this project, feel free to fork the repository and submit a pull request. Please make sure that your code follows the PEP 8 style guide and includes tests where appropriate.</p>
+
 
