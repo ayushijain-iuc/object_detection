@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url({{ url_for('static', filename='image/background2.png') }});
+            background-size: cover; /* Adjust the size of the image */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input[type="file"], input[type="text"] {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        img {
+            margin-top: 20px;
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Object Detection</h1>
+        <form id="uploadForm" enctype="multipart/form-data" method="post" action="/detect">
+            <label for="image">Upload an Image:</label>
+            <input type="file" name="image" id="image" required>
+
+            <label for="object">Enter Object to Detect:</label>
+            <input type="text" name="object" id="object" placeholder="e.g., person, car, dog" required>
+
+            <button type="submit">Detect Object</button>
+        </form>
+
+        <div id="output" class="result"></div>
+    </div>
+</body>
+</html>
